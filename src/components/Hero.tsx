@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from 'react'
+import { FaFacebook, FaInfoCircle } from 'react-icons/fa'
 
 const MatrixRain = () => {
   const canvasRef = useRef<HTMLCanvasElement>(null)
@@ -107,14 +108,22 @@ const Hero = () => {
               {descText}<span className="animate-terminal-blink">|</span>
             </p>
             <div className="mt-8 flex justify-center gap-4">
-              <a href="https://www.facebook.com/hisc.fit.hcmute.edu.vn" target="_blank" rel="noopener noreferrer" className="cyber-button bg-matrix/15 hover:bg-matrix/20 border-matrix/50 text-matrix/90 font-cyber px-6 py-3">
-                <span className="mr-2">&gt;</span>
+              <a 
+                href="https://www.facebook.com/hisc.fit.hcmute.edu.vn" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="cyber-button bg-matrix/15 hover:bg-matrix/20 border-matrix/50 text-matrix/90 font-cyber px-6 py-3 flex items-center"
+              >
+                <FaFacebook className="mr-2" />
                 Tham gia ngay
               </a>
-              <button className="cyber-button bg-transparent hover:bg-matrix/10 border-matrix/35 text-matrix/70 font-cyber px-6 py-3">
-                <span className="mr-2">&gt;</span>
+              <a 
+                href="#about"
+                className="cyber-button bg-transparent hover:bg-matrix/10 border-matrix/35 text-matrix/70 font-cyber px-6 py-3 flex items-center"
+              >
+                <FaInfoCircle className="mr-2" />
                 Tìm hiểu thêm
-              </button>
+              </a>
             </div>
           </div>
         </div>
