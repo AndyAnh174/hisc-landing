@@ -24,7 +24,7 @@ const Activities = () => {
       content: 'Bug bounty hunting là hoạt động tìm kiếm và báo cáo lỗi bảo mật trong các hệ thống, website của các tổ chức và doanh nghiệp. Đây là một hình thức nghiên cứu thực tế, vừa giúp nâng cao kỹ năng chuyên môn vừa có thể tạo ra thu nhập. CLB khuyến khích các thành viên tham gia các chương trình bug bounty uy tín để áp dụng kiến thức vào thực tiễn và phát triển nghề nghiệp. Các bạn có năng lực sẽ được team Điều Hành sắp xếp vào team Bug Bounty Hunters của CLB, nơi hội tụ các bạn có chung niềm đam mê và được hướng dẫn chi tiết để nhanh chóng tiếp cận.'
     },
     {
-      icon: AcademicCapIcon,
+      icon: BeakerIcon,
       title: 'Thực hiện các dự án và nghiên cứu khoa học',
       shortDesc: 'Thực hiện các dự án và nghiên cứu khoa học',
       content: 'CLB luôn khuyến khích và tạo điều kiện cho các thành viên thực hiện các dự án nghiên cứu khoa học, phát triển công cụ và ứng dụng trong lĩnh vực An toàn thông tin. Đây là cơ hội để các thành viên vận dụng kiến thức vào thực tiễn, rèn luyện kỹ năng làm việc nhóm và tạo ra các sản phẩm có giá trị. Các dự án xuất sắc sẽ được CLB hỗ trợ để công bố tại các hội nghị khoa học hoặc phát triển thành các sản phẩm thương mại.'

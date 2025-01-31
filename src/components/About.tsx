@@ -1,8 +1,8 @@
-import { AcademicCapIcon, TrophyIcon, BugAntIcon, UserPlusIcon } from '@heroicons/react/24/outline'
+import { AcademicCapIcon, TrophyIcon, BugAntIcon } from '@heroicons/react/24/outline'
 import { useState } from 'react'
 
 const About = () => {
-  const [activeSection, setActiveSection] = useState(0)
+  const [activeSection, setActiveSection] = useState<number>(0)
 
   const sections = [
     {
@@ -30,11 +30,6 @@ const About = () => {
       icon: BugAntIcon,
       title: 'Bug Bounty',
       description: 'Tham gia các chương trình Bug Bounty'
-    },
-    {
-      icon: AcademicCapIcon,
-      title: 'Nghiên cứu khoa học',
-      description: 'Thực hiện các dự án và nghiên cứu khoa học'
     }
   ]
 
@@ -54,7 +49,9 @@ const About = () => {
             {sections.map((section, index) => (
               <div 
                 key={index}
-                className="cyber-box hover:border-matrix/80 transition-colors duration-300 cursor-pointer"
+                className={`cyber-box hover:border-matrix/80 transition-colors duration-300 cursor-pointer ${
+                  activeSection === index ? 'border-matrix' : 'border-matrix/30'
+                }`}
                 onMouseEnter={() => setActiveSection(index)}
               >
                 <h3 className="text-2xl font-bold mb-4 glitch-text">
@@ -74,14 +71,17 @@ const About = () => {
               <span className="text-matrix mr-2">&gt;</span>
               Tham gia CLB thì sẽ làm những gì?
             </h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {activities.map((activity, index) => (
-                <div key={index} className="p-4 border border-matrix/30 rounded-lg hover:border-matrix transition-colors duration-300">
-                  <activity.icon className="h-12 w-12 text-matrix mb-4" />
-                  <h4 className="text-lg font-bold mb-2 terminal-text">{activity.title}</h4>
-                  <p className="text-sm text-matrix/80">{activity.description}</p>
-                </div>
-              ))}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              {activities.map((activity, index) => {
+                const Icon = activity.icon
+                return (
+                  <div key={index} className="p-4 border border-matrix/30 rounded-lg hover:border-matrix transition-colors duration-300">
+                    <Icon className="h-12 w-12 text-matrix mb-4" />
+                    <h4 className="text-lg font-bold mb-2 terminal-text">{activity.title}</h4>
+                    <p className="text-sm text-matrix/80">{activity.description}</p>
+                  </div>
+                )
+              })}
             </div>
           </div>
 
